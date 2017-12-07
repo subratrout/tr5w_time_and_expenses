@@ -1,4 +1,4 @@
-class User < ApplicationRecord
+eclass User < ApplicationRecord
   include Authem::User
 
   has_secure_token

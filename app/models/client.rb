@@ -15,6 +15,10 @@ class Client < ApplicationRecord
 
   validates_presence_of :name
 
+  # def name
+  #   read_attribute(:name).reverse
+  # end
+  
   def self.all_with_counts
     all.map do |client| 
       { :id => client.id, :draft_timesheets_count => client.timesheets.draft.count }
